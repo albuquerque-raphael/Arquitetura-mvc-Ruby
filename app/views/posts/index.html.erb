@@ -1,0 +1,10 @@
+<h1>Meu Blog</h1>
+<% if @posts.empty? %>
+  <p>Ainda não há posts disponíveis. Volte mais tarde!</p>
+<% else %>
+  <ul>
+    <% @posts.each do |post| %>
+      <li><%= link_to post.title, post %></li>
+    <% end %>
+  </ul>
+<% end %>
